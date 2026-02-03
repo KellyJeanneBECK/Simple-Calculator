@@ -6,6 +6,25 @@
     <link rel="stylesheet" href="style.css" />
     <title>Simple Calculator</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <h1>Simple calculator(s)</h1>
+      <section>
+        <h2>Primitive version</h2>
+        <p>The most simple form, the user can only choose two numbers.</p>
+        <form action="">
+          <label for="first-num">Your first number :</label>
+          <input type="text" name="first-num" id="first_num" />
+          <label for="second-num">Your second number :</label>
+          <input type="text" name="second-num" id="second_num" />
+          <button type="button" onclick="primitiveSum()">+</button>
+          <button type="button" onclick="primitiveSub()">-</button>
+          <button type="button" onclick="primitiveMult()">x</button>
+          <button type="button" onclick="primitiveDivide()">:</button>
+        </form>
+        <p id="primitive_result">Result here</p>
+      </section>
+    </main>
+  </body>
   <script src="script.js"></script>
 </html>
