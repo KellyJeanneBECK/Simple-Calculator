@@ -18,10 +18,26 @@ body {
   background-color: var(--ligth-color);
 }
 section {
-  margin: 1.75rem 0;
+  margin: 4rem 0;
 }
 .intro-text {
   margin: 1rem 0;
+}
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  color: var(--white-color);
+  font-size: 1.25rem;
+  background-color: var(--dark-color);
+  padding: 0.25rem 0;
+}
+button:hover {
+  background-color: var(--dark-hover);
+}
+input {
+  padding: 0 5vw;
+  border-radius: 100px;
 }
 /* ------- END General Style -------*/
 /* ------- START Primitive Calculator -------*/
@@ -31,7 +47,7 @@ section {
   gap: 1vw;
   border: 2px solid var(--dark-color);
   border-radius: 4px 4px 0 0;
-  padding: 0.5rem 5vw;
+  padding: 0.75rem 5vw;
   background-color: var(--white-color);
 }
 .primitive-calculator label,
@@ -45,22 +61,6 @@ section {
   margin-top: 0.25rem;
   font-weight: 600;
 }
-.primitive-calculator input {
-  padding: 0 5vw;
-  border-radius: 100px;
-}
-.primitive-calculator button {
-  cursor: pointer;
-  border: none;
-  border-radius: 4px;
-  color: var(--white-color);
-  font-size: 1.25rem;
-  background-color: var(--dark-color);
-  padding: 0.25rem 0;
-}
-.primitive-calculator button:hover {
-  background-color: var(--dark-hover);
-}
 #primitive_result {
   width: 100%;
   background: var(--dark-color);
@@ -70,6 +70,37 @@ section {
   border-radius: 0 0 4px 4px;
 }
 /* ------- END Primitive Calculator -------*/
+/* ------- START Simple Calculator -------*/
+.simple-calculator {
+  border: 2px solid var(--dark-color);
+  border-radius: 4px;
+  padding: 2rem 5vw;
+  background-color: var(--white-color);
+}
+.simple-calculator input {
+  line-height: 3;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.calc-btn {
+  list-style: none;
+  display: grid;
+  gap: 1vw;
+  grid-template-columns: repeat(4, 1fr);
+}
+.calc-btn button {
+  width: 100%;
+}
+.alt-btn {
+  border: 2px solid var(--dark-color);
+  background-color: transparent;
+  color: var(--dark-color);
+  font-weight: 600;
+}
+.alt-btn:hover {
+  background-color: white;
+}
+/* ------- END Simple Calculator -------*/
 /* ------- MEDIA QUERIES ------- */
 @media screen and (min-width: 768px) {
   body {
@@ -78,7 +109,15 @@ section {
   h1 {
     font-size: 3rem;
   }
-  .primitive-calculator input {
+  input {
+    padding: 0 2vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    padding: 1rem 30vw;
+  }
+  input {
     padding: 0 1vw;
   }
 }
