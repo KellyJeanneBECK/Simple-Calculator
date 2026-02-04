@@ -4,30 +4,23 @@ function setResult(result) {
   document.getElementById("primitive_result").innerText = `Result : ${result}`;
 }
 
-function primitiveSum() {
+function primitiveCalc(operator) {
   let firstValue = parseFloat(document.getElementById("first_num").value);
   let secondValue = parseFloat(document.getElementById("second_num").value);
-  let resultSum = firstValue + secondValue;
-  setResult(resultSum);
-}
-
-function primitiveSub() {
-  let firstValue = parseFloat(document.getElementById("first_num").value);
-  let secondValue = parseFloat(document.getElementById("second_num").value);
-  let resultSub = firstValue - secondValue;
-  setResult(resultSub);
-}
-
-function primitiveMult() {
-  let firstValue = parseFloat(document.getElementById("first_num").value);
-  let secondValue = parseFloat(document.getElementById("second_num").value);
-  let resultMult = firstValue * secondValue;
-  setResult(resultMult);
-}
-
-function primitiveDivide() {
-  let firstValue = parseFloat(document.getElementById("first_num").value);
-  let secondValue = parseFloat(document.getElementById("second_num").value);
-  let resultDivide = firstValue / secondValue;
-  setResult(resultDivide);
+  let resultValue;
+  switch (operator) {
+    case "plus":
+      resultValue = firstValue + secondValue;
+      break;
+    case "minus":
+      resultValue = firstValue - secondValue;
+      break;
+    case "multiply":
+      resultValue = firstValue * secondValue;
+      break;
+    case "divide":
+      resultValue = firstValue / secondValue;
+      break;
+  }
+  setResult(resultValue);
 }
