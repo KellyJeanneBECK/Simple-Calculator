@@ -1,4 +1,6 @@
+// --- Primitive Calculator --
 function setResult(result) {
+  result = +result.toFixed(2); // will round the result at max 2 digits but will not use 'unnecessary' digit
   document.getElementById("primitive_result").innerText = `Result : ${result}`;
 }
 
