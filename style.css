@@ -78,4 +78,7 @@ section {
   h1 {
     font-size: 3rem;
   }
+  .primitive-calculator input {
+    padding: 0 1vw;
+  }
 }
