@@ -1,5 +1,81 @@
+:root {
+  --dark-color: rgb(34, 34, 34);
+  --dark-hover: rgb(55, 55, 55);
+  --ligth-color: rgb(239, 246, 238);
+  --white-color: rgb(251, 255, 248);
+}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Courier New", Courier, monospace;
+  color: var(--dark-color);
+  word-wrap: break-word;
+}
+/* ------- START General Style -------*/
+body {
+  padding: 1rem 5vw;
+  background-color: var(--ligth-color);
+}
+section {
+  margin: 1.75rem 0;
+}
+.intro-text {
+  margin: 1rem 0;
+}
+/* ------- END General Style -------*/
+/* ------- START Primitive Calculator -------*/
+.primitive-calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1vw;
+  border: 2px solid var(--dark-color);
+  border-radius: 4px 4px 0 0;
+  padding: 0.5rem 5vw;
+  background-color: var(--white-color);
+}
+.primitive-calculator label,
+.primitive-calculator input,
+.primitive-calculator p {
+  grid-column: 1 / -1;
+  line-height: 1.75;
+}
+.primitive-calculator label,
+.primitive-calculator p {
+  margin-top: 0.25rem;
+  font-weight: 600;
+}
+.primitive-calculator input {
+  padding: 0 5vw;
+  border-radius: 100px;
+}
+.primitive-calculator button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  color: var(--white-color);
+  font-size: 1.25rem;
+  background-color: var(--dark-color);
+  padding: 0.25rem 0;
+}
+.primitive-calculator button:hover {
+  background-color: var(--dark-hover);
+}
+#primitive_result {
+  width: 100%;
+  background: var(--dark-color);
+  color: var(--white-color);
+  font-weight: 600;
+  padding: 0.5rem 5vw;
+  border-radius: 0 0 4px 4px;
+}
+/* ------- END Primitive Calculator -------*/
+/* ------- MEDIA QUERIES ------- */
+@media screen and (min-width: 768px) {
+  body {
+    padding: 1rem 25vw;
+  }
+  h1 {
+    font-size: 3rem;
+  }
 }
