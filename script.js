@@ -1,7 +1,8 @@
 // --- Primitive Calculator --
 function setResult(result) {
   result = +result.toFixed(2); // will round the result at max 2 digits but will not use 'unnecessary' digit
-  document.getElementById("primitive_result").innerText = `Result : ${result}`;
+  document.getElementById("primitive_result").textContent =
+    `Result : ${result}`;
 }
 
 function primitiveCalc(operator) {
@@ -24,3 +25,10 @@ function primitiveCalc(operator) {
   }
   setResult(resultValue);
 }
+
+// --- Simple Calculator ---
+const calcDisplay = document.getElementById("calc_display");
+
+var addInDisplay = (btnValue) => (calcDisplay.value += btnValue);
+var clearDisplay = () => (calcDisplay.value = "");
+var deleteLast = () => (calcDisplay.value = calcDisplay.value.slice(0, -1));

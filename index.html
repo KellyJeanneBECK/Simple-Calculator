@@ -23,7 +23,7 @@
           <button type="button" onclick="primitiveCalc('plus')">+</button>
           <button type="button" onclick="primitiveCalc('minus')">-</button>
           <button type="button" onclick="primitiveCalc('multiply')">*</button>
-          <button type="button" onclick="primitiveCalc('divide')">:</button>
+          <button type="button" onclick="primitiveCalc('divide')">/</button>
         </form>
         <p id="primitive_result">Result here</p>
       </section>
@@ -33,31 +33,53 @@
           The user can either type in the input or use the buttons. The result
           will display inside the input.
         </p>
-        <form action="" class="simple-calculator">
+        <div action="" class="simple-calculator">
           <input type="text" name="calc-display" id="calc_display" />
           <ul class="calc-btn">
-            <li><button type="button">%</button></li>
-            <li><button type="button">C</button></li>
-            <li><button type="button">DEL</button></li>
-            <li><button type="button">:</button></li>
-            <li><button type="button" class="alt-btn">7</button></li>
-            <li><button type="button" class="alt-btn">8</button></li>
-            <li><button type="button" class="alt-btn">9</button></li>
-            <li><button type="button">*</button></li>
-            <li><button type="button" class="alt-btn">4</button></li>
-            <li><button type="button" class="alt-btn">5</button></li>
-            <li><button type="button" class="alt-btn">6</button></li>
-            <li><button type="button">-</button></li>
-            <li><button type="button" class="alt-btn">1</button></li>
-            <li><button type="button" class="alt-btn">2</button></li>
-            <li><button type="button" class="alt-btn">3</button></li>
-            <li><button type="button">+</button></li>
-            <li><button type="button" class="alt-btn">%</button></li>
-            <li><button type="button" class="alt-btn">0</button></li>
-            <li><button type="button" class="alt-btn">.</button></li>
-            <li><button type="button">=</button></li>
+            <li><button onclick="clearDisplay()">C</button></li>
+            <li><button onclick="addInDisplay(value)" value="(">(</button></li>
+            <li><button onclick="addInDisplay(value)" value=")">)</button></li>
+            <li><button onclick="addInDisplay('/')">/</button></li>
+            <li>
+              <button class="alt-btn" onclick="addInDisplay(7)">7</button>
+            </li>
+            <li>
+              <button class="alt-btn" onclick="addInDisplay(8)">8</button>
+            </li>
+            <li>
+              <button class="alt-btn" onclick="addInDisplay(9)">9</button>
+            </li>
+            <li><button onclick="addInDisplay('*')">*</button></li>
+            <li>
+              <button class="alt-btn" onclick="addInDisplay(4)">4</button>
+            </li>
+            <li>
+              <button class="alt-btn" onclick="addInDisplay(5)">5</button>
+            </li>
+            <li>
+              <button class="alt-btn" onclick="addInDisplay(6)">6</button>
+            </li>
+            <li><button onclick="addInDisplay('-')">-</button></li>
+            <li>
+              <button class="alt-btn" onclick="addInDisplay(1)">1</button>
+            </li>
+            <li>
+              <button class="alt-btn" onclick="addInDisplay(2)">2</button>
+            </li>
+            <li>
+              <button class="alt-btn" onclick="addInDisplay(3)">3</button>
+            </li>
+            <li><button onclick="addInDisplay('+')">+</button></li>
+            <li><button onclick="deleteLast()">DEL</button></li>
+            <li>
+              <button class="alt-btn" onclick="addInDisplay(0)">0</button>
+            </li>
+            <li>
+              <button class="alt-btn" onclick="addInDisplay('.')">.</button>
+            </li>
+            <li><button>=</button></li>
           </ul>
-        </form>
+        </div>
       </section>
     </main>
   </body>
