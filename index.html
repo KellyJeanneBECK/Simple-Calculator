@@ -33,6 +33,10 @@
           The user can either type in the input or use the buttons. The result
           will display inside the input.
         </p>
+        <p class="intro-text">
+          The calculator won't work if the user make a syntax error but will
+          keep the input for them to modify.
+        </p>
         <div action="" class="simple-calculator">
           <input type="text" name="calc-display" id="calc_display" />
           <ul class="calc-btn">
@@ -77,7 +81,7 @@
             <li>
               <button class="alt-btn" onclick="addInDisplay('.')">.</button>
             </li>
-            <li><button>=</button></li>
+            <li><button onclick="simpleCalc()">=</button></li>
           </ul>
         </div>
       </section>
